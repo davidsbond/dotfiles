@@ -1,0 +1,16 @@
+ZSH_THEME="agnoster"
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+PATH="$PATH:$HOME/go/bin"
+PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+PATH="$PATH:$HOME/go/go1.15.3/bin"
+
+export ZSH="/home/david/.oh-my-zsh"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
+plugins=(git kubectl golang docker terraform docker-compose gcloud npm ubuntu yarn)
+source $ZSH/oh-my-zsh.sh
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
