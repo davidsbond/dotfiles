@@ -10,8 +10,11 @@ export ZSH="/home/david/.oh-my-zsh"
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 export KUBECONFIG=$HOME/.kube/config
+export NVM_DIR="$HOME/.nvm"
 
 plugins=(git kubectl golang docker terraform docker-compose gcloud npm ubuntu yarn)
 source $ZSH/oh-my-zsh.sh
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
