@@ -1,16 +1,17 @@
 [user]
-	name = David Bond
-	email = davidsbond93@gmail.com
-	signingkey = A35B34F344ED7AFE
+    name = David Bond
+    email = davidsbond93@gmail.com
+    signingkey = A35B34F344ED7AFE
 [filter "strongbox"]
-	clean = strongbox -clean %f
-	smudge = strongbox -smudge %f
-	required = true
+    clean = strongbox -clean %f
+    smudge = strongbox -smudge %f
+    required = true
 [diff "strongbox"]
-	textconv = strongbox -diff
+    textconv = strongbox -diff
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [core]
-	excludesfile = /home/david/.gitignore
+    excludesfile = /home/david/.gitignore
 [commit]
-	gpgsign = true
+    gpgsign = true
+    template = /home/david/.gitcommit
