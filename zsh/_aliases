@@ -1,0 +1,1 @@
+alias tailscale-ip=$(tailscale status -json | jq -r .Self.TailAddr)

@@ -1,0 +1,18 @@
+# Delete unused container images & volumes
+@weekly docker system prune --force --volumes
+
+# Clear out go's mod & build caches
+@weekly go clean -cache -testcache -modcache
+
+# Clear logs older than 1 day
+@daily sudo journalctl --vacuum-time=1d
+
+# Clear rotated and compressed logs
+@daily sudo find /var/log -type f -regex ".*\.gz$" -delete
+@daily sudo find /var/log -type f -regex ".*\.[0-9]$" -delete
+
+# Clear temporary files that have not been accessed in 7 days
+@daily sudo find /tmp -type f -atime +7 -delete
+
+# Upgrade packages weekly
+@weekly sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y

@@ -1,9 +1,9 @@
 ZSH_THEME="agnoster"
 NPM_PACKAGES="${HOME}/.npm-packages"
 
+# Add golang binaries to PATH.
 PATH="$PATH:$HOME/go/bin"
 PATH="$PATH:$HOME/.local/bin"
-PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 PATH="$PATH:$HOME/go/go1.16/bin"
 
 export ZSH="/home/david/.oh-my-zsh"
@@ -18,3 +18,13 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install aliases
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+
+# Install cron jobs
+if [ -f ~/.crontab ]; then
+    cat ~/.crontab | crontab -
+fi
