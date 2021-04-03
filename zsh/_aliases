@@ -1,1 +1,4 @@
 alias tailscale-ip=$(tailscale status -json | jq -r .Self.TailAddr)
+alias add="git add ."
+alias amend="git commit --amend --no-edit"
+alias commit="git commit"
