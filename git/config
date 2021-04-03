@@ -1,17 +1,64 @@
-[user]
-    name = David Bond
-    email = davidsbond93@gmail.com
-    signingkey = A35B34F344ED7AFE
+[color]
+    ui = auto
+
+[color "branch"]
+    upstream = cyan
+
+[commit]
+    gpgsign = true
+    template = /home/david/.gitcommit
+
+[core]
+    excludesfile = /home/david/.gitignore
+    pager = cat
+    whitespace = -trailing-space
+
+[diff]
+    mnemonicPrefix = true
+    renames = true
+    wordRegex = .
+    submodule = log
+
+[diff "strongbox"]
+    textconv = strongbox -diff
+
+[fetch]
+    recurseSubmodules = on-demand
+
 [filter "strongbox"]
     clean = strongbox -clean %f
     smudge = strongbox -smudge %f
     required = true
-[diff "strongbox"]
-    textconv = strongbox -diff
+
+[grep]
+    break = true
+    heading = true
+    lineNumber = true
+    extendedRegexp = true
+
+[log]
+    abbrevCommit = true
+    follow = true
+    decorate = false
+
+[pull]
+    rebase = true
+
+[push]
+    default = upstream
+    followTags = true
+
 [url "git@github.com:"]
     insteadOf = https://github.com/
-[core]
-    excludesfile = /home/david/.gitignore
-[commit]
-    gpgsign = true
-    template = /home/david/.gitcommit
+
+[user]
+    name = David Bond
+    email = davidsbond93@gmail.com
+    signingkey = A35B34F344ED7AFE
+
+[status]
+    submoduleSummary = true
+    showUntrackedFiles = all
+
+[tag]
+    sort = version:refname
