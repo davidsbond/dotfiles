@@ -9,7 +9,8 @@
     template = /home/david/.gitcommit
 
 [core]
-    excludesfile = /home/david/.gitignore
+    excludesfile = ~/.gitignore
+    attributesFile = ~/.gitattributes
     pager = cat
     whitespace = -trailing-space
 
