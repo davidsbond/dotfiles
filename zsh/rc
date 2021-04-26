@@ -9,8 +9,10 @@ PATH="$PATH:$HOME/go/go1.16/bin"
 # Add kubebuilder binary to PATH.
 export PATH=$PATH:/usr/local/kubebuilder/bin
 
-export ZSH="/home/david/.oh-my-zsh"
+# Add NPM packages to PATH.
 export PATH="$PATH:$NPM_PACKAGES/bin"
+
+export ZSH="/home/david/.oh-my-zsh"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 export KUBECONFIG=$HOME/.kube/config
 export NVM_DIR="$HOME/.nvm"

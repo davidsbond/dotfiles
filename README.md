@@ -18,4 +18,5 @@ git/config => $HOME/.gitconfig
 - [nano](./nano) - Nano editor configuration
 - [npm](./npm) - Global NPM CLI configuration
 - [vue](./vue) - Global Vue CLI configuration
+- [yarn](./yarn) - Global Yarn CLI configuration
 - [zsh](./zsh) - ZSH configuration and aliases
