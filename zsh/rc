@@ -6,6 +6,9 @@ PATH="$PATH:$HOME/go/bin"
 PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/go/go1.16/bin"
 
+# Add kubebuilder binary to PATH.
+export PATH=$PATH:/usr/local/kubebuilder/bin
+
 export ZSH="/home/david/.oh-my-zsh"
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
